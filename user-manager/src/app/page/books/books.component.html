@@ -1,9 +1,29 @@
-<p>Books: {{ store.books() | json }}</p>
-<p>Loading: {{ store.isLoading() }}</p>
+<div class="row">
+  <div class="col-12">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Title</th>
+          <th>Author</th>
+          <th>ISBN</th>
+          <th>Pages</th>
+          <th>Publisher</th>
+        </tr>
+      </thead>
 
-<!-- 👇 The `DeepSignal` value can be read in the same way as `Signal`. -->
-<p>Pagination: {{ store.filter() | json }}</p>
-
-<!-- 👇 Nested signals are created as `DeepSignal` properties. -->
-<p>Query: {{ store.filter.query() }}</p>
-<p>Order: {{ store.filter.order() }}</p>
+      <tbody>
+        @for (book of store.books(); track $index) {
+        <tr>
+          <td>{{ book.id }}</td>
+          <td>{{ book.title }}</td>
+          <td>{{ book.author }}</td>
+          <td>{{ book.isbn }}</td>
+          <td>{{ book.pages }}</td>
+          <td>{{ book.publisher }}</td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>
