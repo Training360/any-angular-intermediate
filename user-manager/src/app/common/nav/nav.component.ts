@@ -14,5 +14,6 @@ export class NavComponent {
   menuItems = signal<MenuItem[]>([
     { text: 'Home', link: '/' },
     { text: 'Users', link: '/users' },
+    { text: 'Books', link: '/books' },
   ]);
 }
