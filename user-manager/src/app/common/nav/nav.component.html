@@ -14,6 +14,20 @@
           </a>
         </li>
         }
+
+        @if (token()) {
+        <li>
+          <button (click)="onLogout()" class="btn btn-outline">
+            <i class="fa fa-sign-out"></i>
+          </button>
+        </li>
+        } @else {
+        <li>
+          <button routerLink="/login" class="btn btn-outline">
+            <i class="fa fa-sign-in"></i>
+          </button>
+        </li>
+        }
       </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">

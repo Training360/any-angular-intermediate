@@ -3,6 +3,8 @@ import { User } from '../model/user';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 
+const STORAGE_KEY = 'user-manager-token-key';
+
 export interface UserCredentials {
   email: string;
   password: string;
@@ -22,7 +24,11 @@ export class AuthService {
 
   readonly token = signal('');
 
-  constructor() {}
+  constructor() {
+    if (sessionStorage[STORAGE_KEY]) {
+      this.token.set(sessionStorage[STORAGE_KEY]);
+    }
+  }
 
   login(credentials: UserCredentials): void {
     const url = this.authUrl + 'login';
@@ -31,6 +37,7 @@ export class AuthService {
         console.log(response);
         this.token.set(response.accessToken);
         this.lastError.set('');
+        sessionStorage[STORAGE_KEY] = this.token();
         this.router.navigate(['/']);
       },
       (error) => {
@@ -46,5 +53,9 @@ export class AuthService {
     });
   }
 
-  logout(): void {}
+  logout(): void {
+    this.token.set('');
+    sessionStorage.removeItem(STORAGE_KEY);
+    this.router.navigate(['login']);
+  }
 }

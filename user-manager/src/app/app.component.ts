@@ -25,8 +25,8 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.subTitle.set('Any user manager');
 
-    interval(1000).subscribe(() => {
-      this.counter.update((c) => c + 1);
-    });
+    // interval(1000).subscribe(() => {
+    //   this.counter.update((c) => c + 1);
+    // });
   }
 }

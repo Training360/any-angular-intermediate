@@ -1,6 +1,7 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { MenuItem } from '../../model/menu-item';
 import { RouterModule } from '@angular/router';
+import { AuthService } from '../../service/auth.service';
 
 @Component({
   selector: 'app-nav',
@@ -9,12 +10,19 @@ import { RouterModule } from '@angular/router';
   styleUrl: './nav.component.css',
 })
 export class NavComponent {
+  private auth = inject(AuthService);
+
+  token = this.auth.token;
+
   title = signal('User Manager');
 
   menuItems = signal<MenuItem[]>([
     { text: 'Home', link: '/' },
     { text: 'Users', link: '/users' },
     { text: 'Books', link: '/books' },
-    { text: 'Login', link: '/login' },
   ]);
+
+  onLogout(): void {
+    this.auth.logout();
+  }
 }
