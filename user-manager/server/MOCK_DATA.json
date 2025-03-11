@@ -7999,6 +7999,13 @@
       "email": "pchastelrr@mail.ru",
       "gender": "Female",
       "ipAddress": "166.178.209.167"
+    },
+    {
+      "email": "pista@ver.hu",
+      "password": "$2a$10$TJCK5RzsX6KVstaE5d867.0tLKb3qJKdp7ljzx/gZLS64EUdYejx2",
+      "firstName": "Vér",
+      "lastName": "István",
+      "id": 1001
     }
   ],
   "books": [

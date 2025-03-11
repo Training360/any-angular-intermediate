@@ -1,0 +1,34 @@
+<div class="row">
+  <div class="col-3"></div>
+  <div class="col-6">
+    <h3>Login to system</h3>
+    <form>
+      <div class="form-group">
+        <label>Email</label>
+        <input #email [value]="credentials().email" (input)="updateCredentials(email.value, pass.value)" type="email"
+          class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input #pass [value]="credentials().password" (input)="updateCredentials(email.value, pass.value)"
+          type="password" class="form-control">
+      </div>
+
+      <button (click)="onLogin()" type="button" class="btn btn-primary mt-3">
+        <i class="fa fa-sign-in"></i>
+        Login
+      </button>
+
+    </form>
+
+    @if (lastError()) {
+    <div class="alert alert-danger">
+      <strong>Error: </strong>{{ lastError() }}
+    </div>
+    }
+
+    <button (click)="onRegister()" class="btn btn-success">
+      Register
+    </button>
+  </div>
+</div>

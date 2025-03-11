@@ -15,5 +15,6 @@ export class NavComponent {
     { text: 'Home', link: '/' },
     { text: 'Users', link: '/users' },
     { text: 'Books', link: '/books' },
+    { text: 'Login', link: '/login' },
   ]);
 }

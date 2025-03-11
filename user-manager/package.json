@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "server": "json-server ./server/MOCK_DATA.json --watch"
+    "server": "cd node_modules/.bin && json-server-auth ../../server/MOCK_DATA.json"
   },
   "private": true,
   "dependencies": {
@@ -31,7 +31,10 @@
     "@angular/cli": "^19.1.4",
     "@angular/compiler-cli": "^19.1.0",
     "@types/jasmine": "~5.1.0",
+    "express": "^4.21.2",
     "jasmine-core": "~5.5.0",
+    "json-server": "^0.17.4",
+    "json-server-auth": "^2.1.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
