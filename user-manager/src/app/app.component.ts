@@ -1,4 +1,11 @@
-import { Component, effect, OnInit, signal } from '@angular/core';
+import {
+  Component,
+  effect,
+  OnChanges,
+  OnInit,
+  signal,
+  SimpleChanges,
+} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { interval } from 'rxjs';
 import { NavComponent } from './common/nav/nav.component';
@@ -9,7 +16,7 @@ import { NavComponent } from './common/nav/nav.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, OnChanges {
   title = 'user-manager';
 
   subTitle = signal('User manager app');
@@ -28,5 +35,9 @@ export class AppComponent implements OnInit {
     // interval(1000).subscribe(() => {
     //   this.counter.update((c) => c + 1);
     // });
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log(changes);
   }
 }

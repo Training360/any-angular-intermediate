@@ -7,7 +7,9 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "server": "cd node_modules/.bin && json-server-auth ../../server/MOCK_DATA.json"
+    "server": "cd node_modules/.bin && json-server-auth ../../server/MOCK_DATA.json",
+    "auth-server": "npx json-server-auth --watch -r ./server/routes.json ./server/MOCK_DATA.json",
+    "dev": "concurrently \"npm run auth-server\" \"npm start\""
   },
   "private": true,
   "dependencies": {
@@ -22,6 +24,7 @@
     "@ngrx/signals": "^19.0.1",
     "bootstrap": "^5.3.3",
     "font-awesome": "^4.7.0",
+    "memo-decorator": "^2.0.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
@@ -31,6 +34,7 @@
     "@angular/cli": "^19.1.4",
     "@angular/compiler-cli": "^19.1.0",
     "@types/jasmine": "~5.1.0",
+    "concurrently": "^9.1.2",
     "express": "^4.21.2",
     "jasmine-core": "~5.5.0",
     "json-server": "^0.17.4",
