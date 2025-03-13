@@ -1,0 +1,15 @@
+<div class="container">
+  <button (click)="openModal(template)" class="btn btn-primary my-3">
+    Open modal for Patric
+  </button>
+</div>
+
+<ng-template #template>
+  <div class="modal-header">
+    <h3>New Testcase</h3>
+    <button (click)="modalRef?.hide()" class="btn btn-close close pull-right"></button>
+  </div>
+  <div class="modal-body">
+    The new testcase form.
+  </div>
+</ng-template>
