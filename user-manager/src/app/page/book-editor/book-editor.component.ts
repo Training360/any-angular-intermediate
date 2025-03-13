@@ -12,10 +12,16 @@ import { Router } from '@angular/router';
 import { BookModel } from '../../model/book.model';
 import { BooksStore } from '../../store/books.store';
 import { BookService } from '../../service/book.service';
+import { RatingInputComponent } from '../../common/rating-input/rating-input.component';
 
 @Component({
   selector: 'app-book-editor',
-  imports: [JsonPipe, ReactiveFormsModule, TitleCasePipe, KeyValuePipe],
+  imports: [
+    ReactiveFormsModule,
+    TitleCasePipe,
+    KeyValuePipe,
+    RatingInputComponent,
+  ],
   templateUrl: './book-editor.component.html',
   styleUrl: './book-editor.component.css',
 })

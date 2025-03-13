@@ -7,7 +7,12 @@
       @for (k of keys; track $index) {
       <div class="form-group mt-2">
         <label for="">{{ k | titlecase }}</label>
+        @if (k !== 'rating') {
         <input [formControlName]="k" type="text" class="form-control">
+        } @else {
+        <app-rating-input [formControlName]="k"></app-rating-input>
+        }
+
         @if (form.controls[k].invalid) {
         @if (form.controls[k].errors!['required']) {
         <div class="error-message">

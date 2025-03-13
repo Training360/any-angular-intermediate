@@ -1,0 +1,9 @@
+@for (starred of stars; track $index; let i = $index) {
+<span class="star" (click)="onTuched(); rate(i + (starred ? (value > i + 1 ? 1 : 0) : 1))">
+  @if (starred) {
+  <i class="fa fa-star filled"></i>
+  } @else {
+  <i class="fa fa-star no-filled"></i>
+  }
+</span>
+}
