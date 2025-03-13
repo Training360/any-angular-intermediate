@@ -61,7 +61,7 @@ export class BookEditorComponent implements OnInit {
     const controls: { [k: string]: FormControl } = {};
     for (let m of this.bookMembers) {
       controls[m.key] = new FormControl(
-        this.book()![m.key],
+        this.book()![m.key] ?? 0,
         Validators.required
       );
       if (m.type === 'number') {
