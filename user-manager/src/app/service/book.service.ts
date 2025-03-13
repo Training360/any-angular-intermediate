@@ -16,4 +16,20 @@ export class BookService {
   fetchAll(): Promise<BookModel[]> {
     return firstValueFrom(this.http.get<BookModel[]>(this.apiUrl));
   }
+
+  fetchOne(id: number): Promise<BookModel> {
+    return firstValueFrom(this.http.get<BookModel>(`${this.apiUrl}/${id}`));
+  }
+
+  updateOne(id: number, book: BookModel): Promise<BookModel> {
+    return firstValueFrom(
+      this.http.patch<BookModel>(`${this.apiUrl}/${id}`, book)
+    );
+  }
+
+  query(query: string): Promise<Partial<BookModel>[]> {
+    return firstValueFrom(
+      this.http.get<Partial<BookModel>[]>(`${this.apiUrl}?${query}`)
+    );
+  }
 }

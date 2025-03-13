@@ -12,10 +12,11 @@ import { FormsModule } from '@angular/forms';
 import { FiboPipe } from '../../pipe/fibo.pipe';
 import { SearchbarComponent } from '../../common/searchbar/searchbar.component';
 import { BookModel } from '../../model/book.model';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-books',
-  imports: [FormsModule, FiboPipe, SearchbarComponent],
+  imports: [FormsModule, FiboPipe, SearchbarComponent, RouterModule],
   templateUrl: './books.component.html',
   styleUrl: './books.component.css',
 })

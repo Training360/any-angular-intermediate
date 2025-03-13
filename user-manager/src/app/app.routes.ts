@@ -4,6 +4,7 @@ import { UsersComponent } from './page/users/users.component';
 import { BooksComponent } from './page/books/books.component';
 import { LoginComponent } from './page/login/login.component';
 import { authGuard } from './guard/auth.guard';
+import { BookEditorComponent } from './page/book-editor/book-editor.component';
 
 export const routes: Routes = [
   {
@@ -20,6 +21,10 @@ export const routes: Routes = [
     path: 'books',
     component: BooksComponent,
     canActivate: [authGuard],
+  },
+  {
+    path: 'books/edit/:id',
+    component: BookEditorComponent,
   },
   {
     path: 'login',
