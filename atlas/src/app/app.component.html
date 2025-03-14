@@ -1,7 +1,13 @@
+<app-navbar></app-navbar>
+
 <div class="container">
   <button (click)="openModal(template)" class="btn btn-primary my-3">
     Open modal for Patric
   </button>
+
+  <router-outlet></router-outlet>
+
+
 </div>
 
 <ng-template #template>

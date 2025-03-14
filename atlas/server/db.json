@@ -1,0 +1,218 @@
+{
+  "plans": [
+    {
+      "id": 1,
+      "description": "Puncture wound without foreign body of right ear, sequela",
+      "status": "open"
+    },
+    {
+      "id": 2,
+      "description": "Nondisp suprcndl fx w/o intrcndl extn low end l femr, 7thG",
+      "status": "close"
+    },
+    {
+      "id": 3,
+      "description": "Toxic effect of chromium and its compounds, undet, sequela",
+      "status": "open"
+    },
+    {
+      "id": 4,
+      "description": "Penetrating wound w/o foreign body of right eyeball, subs",
+      "status": "open"
+    },
+    {
+      "id": 5,
+      "description": "Pauciarticular juvenile rheumatoid arthritis, unsp wrist",
+      "status": "close"
+    },
+    {
+      "id": 6,
+      "description": "Mech compl of graft of urinary organ, sequela",
+      "status": "open"
+    },
+    {
+      "id": 7,
+      "description": "Disorders of left acoustic nerve",
+      "status": "close"
+    },
+    {
+      "id": 8,
+      "description": "Poisoning by predom beta-adrenocpt agonists, accidental",
+      "status": "open"
+    },
+    {
+      "id": 9,
+      "description": "Bunion of left foot",
+      "status": "close"
+    },
+    {
+      "id": 10,
+      "description": "Nondisp commnt fx l patella, 7thE",
+      "status": "open"
+    }
+  ],
+  "cases": [
+    {
+      "id": 1,
+      "description": "Undrdose of unsp prim systemic and hematolog agent, subs",
+      "status": "failed",
+      "code": "CIU",
+      "testPlanId": 6,
+      "testSteps": 8,
+      "preConditions": 10
+    },
+    {
+      "id": 2,
+      "description": "Corrosion of third degree of left foot, subsequent encounter",
+      "status": "failed",
+      "code": "YHR",
+      "testPlanId": 1,
+      "testSteps": 2,
+      "preConditions": 8
+    },
+    {
+      "id": 3,
+      "description": "Nondisp fx of lateral condyle of l femr, 7thM",
+      "status": "blocked",
+      "code": "ACX",
+      "testPlanId": 10,
+      "testSteps": 4,
+      "preConditions": 3
+    },
+    {
+      "id": 4,
+      "description": "Oth fx shaft of unsp fibula, 7thM",
+      "status": "passed",
+      "code": "NQY",
+      "testPlanId": 7,
+      "testSteps": 7,
+      "preConditions": 2
+    },
+    {
+      "id": 5,
+      "description": "Terorsm w explosn of marine weap, publ sfty offcl inj, init",
+      "status": "passed",
+      "code": "KGT",
+      "testPlanId": 5,
+      "testSteps": 8,
+      "preConditions": 4
+    },
+    {
+      "id": 6,
+      "description": "Corrosion of unsp degree of right shoulder, init encntr",
+      "status": "blocked",
+      "code": "ULY",
+      "testPlanId": 8,
+      "testSteps": 9,
+      "preConditions": 4
+    },
+    {
+      "id": 7,
+      "description": "Anaphylactic reaction due to peanuts, subsequent encounter",
+      "status": "passed",
+      "code": "CBL",
+      "testPlanId": 7,
+      "testSteps": 7,
+      "preConditions": 9
+    },
+    {
+      "id": 8,
+      "description": "Pasngr in 3-whl mv injured in clsn w oth and unsp mv nontraf",
+      "status": "passed",
+      "code": "LCR",
+      "testPlanId": 2,
+      "testSteps": 9,
+      "preConditions": 5
+    },
+    {
+      "id": 9,
+      "description": "Unspecified physeal fracture of upper end of femur",
+      "status": "failed",
+      "code": "PJC",
+      "testPlanId": 8,
+      "testSteps": 1,
+      "preConditions": 1
+    },
+    {
+      "id": 10,
+      "description": "Nondisp seg fx shaft of ulna, unsp arm, 7thJ",
+      "status": "blocked",
+      "code": "GRM",
+      "testPlanId": 4,
+      "testSteps": 4,
+      "preConditions": 1
+    }
+  ],
+  "steps": [
+    {
+      "id": 1,
+      "description": "Spontaneous tension pneumothorax",
+      "status": "failed",
+      "code": "TUT",
+      "testCaseId": 8
+    },
+    {
+      "id": 2,
+      "description": "Nondisp commnt fx unsp patella, subs for clos fx w malunion",
+      "status": "failed",
+      "code": "WDS",
+      "testCaseId": 10
+    },
+    {
+      "id": 3,
+      "description": "Corrosion of first degree of lip(s), subsequent encounter",
+      "status": "blocked",
+      "code": "BXZ",
+      "testCaseId": 7
+    },
+    {
+      "id": 4,
+      "description": "Unsp fx lower end of unsp tibia, subs for clos fx w malunion",
+      "status": "passed",
+      "code": "MAN",
+      "testCaseId": 8
+    },
+    {
+      "id": 5,
+      "description": "Sltr-haris Type I physl fx lower end humer, right arm, init",
+      "status": "failed",
+      "code": "SMV",
+      "testCaseId": 9
+    },
+    {
+      "id": 6,
+      "description": "Underdosing of rifampicins, sequela",
+      "status": "failed",
+      "code": "TFT",
+      "testCaseId": 3
+    },
+    {
+      "id": 7,
+      "description": "Rheumatoid myopathy with rheumatoid arthritis of right hip",
+      "status": "failed",
+      "code": "RHD",
+      "testCaseId": 5
+    },
+    {
+      "id": 8,
+      "description": "Puncture wound w/o foreign body of right wrist, init encntr",
+      "status": "passed",
+      "code": "BSS",
+      "testCaseId": 6
+    },
+    {
+      "id": 9,
+      "description": "Chronic myelomonocytic leukemia, in relapse",
+      "status": "failed",
+      "code": "BUT",
+      "testCaseId": 1
+    },
+    {
+      "id": 10,
+      "description": "Mix cndct/snrl hear loss,uni,r ear w rstrcd hear cntra side",
+      "status": "failed",
+      "code": "CYO",
+      "testCaseId": 3
+    }
+  ]
+}

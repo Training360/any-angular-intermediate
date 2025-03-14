@@ -6,7 +6,7 @@ import { BaseService } from './base.service';
   providedIn: 'root',
 })
 export class TestCaseService extends BaseService<TestCase> {
-  protected override entity: string = 'testCase';
+  protected override entity: string = 'cases';
 
   constructor() {
     super();

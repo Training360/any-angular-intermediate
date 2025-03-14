@@ -1,10 +1,11 @@
 import { Component, inject, TemplateRef } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ModalModule, BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import { NavbarComponent } from './common/navbar/navbar.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ModalModule],
+  imports: [RouterOutlet, ModalModule, NavbarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   providers: [BsModalService],
